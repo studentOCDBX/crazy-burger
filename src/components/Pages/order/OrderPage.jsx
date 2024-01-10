@@ -9,7 +9,6 @@ function OrderPage() {
     //  Affichage(render) 
     return (
         <>
-            <div>OrderPage</div>
             <h1>Bonjour {username}</h1>
             <br />
             <Link to="/">
