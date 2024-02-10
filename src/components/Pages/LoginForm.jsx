@@ -1,34 +1,38 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-
-
 function LoginForm() {
     // state (état, données)
-    const [name, setName] = useState("")
+    const [username, setusername] = useState('')
     const navigate = useNavigate()
 
     // Comportements
     const handleSubmit = (e) => {
         e.preventDefault()
-        setName("")
-        navigate(`order/${name}`)
+        setusername('')
+        navigate(`order/${username}`)
     }
 
     const handleChange = (e) => {
-        setName(e.target.value)
+        setusername(e.target.value)
     }
 
-    //  Affichage(render) 
+    //  Affichage(render)
 
     return (
         <form action="submit" onSubmit={handleSubmit}>
-            <h1>Bienvenue chez nous!</h1>
+            <h1>Bienvenue chez nous !</h1>
             <br />
             <h2>Connectez-vous</h2>
-            <input type="text" required placeholder="Entrez votre prénom..." value={name} onChange={handleChange} />
-            <button >Accéder à votre espace</button>
-        </form >
+            <input
+                type="text"
+                required
+                placeholder="Entrez votre prénom"
+                value={username}
+                onChange={handleChange}
+            />
+            <button>Accéder à mon espace</button>
+        </form>
     )
 }
 
