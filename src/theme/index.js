@@ -70,3 +70,5 @@ export const theme = {
     weights,
     spacing,
 }
+
+export default theme
