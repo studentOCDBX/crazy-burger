@@ -6,6 +6,7 @@ const LogoStyled = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     p {
         color: ${theme.colors.primary};
         height: 115px;
@@ -14,7 +15,6 @@ const LogoStyled = styled.div`
         font-weight: ${theme.weights.bold};
         text-transform: uppercase;
         line-height: 115px;
-        margin: 214px 0 0 0;
     }
     > :first-child {
         width: 205px;
@@ -25,7 +25,7 @@ const LogoStyled = styled.div`
     img {
         width: 200px;
         height: 150px;
-        margin-top: 197px;
+        /* margin-top: 197px; */
     }
 `
 
