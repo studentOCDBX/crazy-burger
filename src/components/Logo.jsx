@@ -7,25 +7,32 @@ const LogoStyled = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    transform: scale(3);
+
     p {
+        justify-content: center;
         color: ${theme.colors.primary};
-        height: 115px;
+        height: 46px;
         font-family: 'Amatic SC';
-        font-size: 110px;
+        font-size: 36px;
         font-weight: ${theme.weights.bold};
         text-transform: uppercase;
-        line-height: 115px;
+        line-height: 46px;
+        text-align: center;
     }
     > :first-child {
-        width: 205px;
+        width: 73px;
     }
     > :last-child {
-        width: 312px;
+        width: 79px;
     }
     img {
-        width: 200px;
-        height: 150px;
+        width: 80px;
+        height: 60px;
         /* margin-top: 197px; */
+    }
+    @media screen and (max-width: 768px) {
+        transform: scale(1.32);
     }
 `
 

@@ -6,10 +6,8 @@ import { BsPersonCircle } from 'react-icons/bs'
 import { FaChevronRight } from 'react-icons/fa'
 
 const LoginFormStyled = styled.form`
-    /* border: 1px solid white; */
     width: 464px;
     height: 438px;
-    margin: 0 525px 0 449px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,9 +21,9 @@ const LoginFormStyled = styled.form`
         margin-bottom: 32px;
     }
     h2 {
-        font-size: 36px;
+        font-size: ${theme.fonts.P4};
         line-height: 46px;
-        margin-bottom: 18px;
+        margin-bottom: ${theme.fonts.P1};
     }
     hr {
         border: 1px solid ${theme.colors.primary};
@@ -49,8 +47,8 @@ const LoginFormStyled = styled.form`
     }
     .inputSvg {
         color: ${theme.colors.dark};
-        width: 15px;
-        height: 15px;
+        width: ${theme.fonts.P0};
+        height: ${theme.fonts.P0};
     }
     button {
         border: 1px;
@@ -64,14 +62,37 @@ const LoginFormStyled = styled.form`
         gap: 0.3rem;
         font-family: Arial;
         font-weight: ${theme.weights.bold};
-        font-size: 15px;
-        line-height: 15px;
+        font-size: ${theme.fonts.P0};
+        line-height: ${theme.fonts.P0};
         background-color: ${theme.colors.primary};
         color: ${theme.colors.white};
         cursor: pointer;
         &:hover {
             background-color: ${theme.colors.background_white};
             color: ${theme.colors.primary};
+        }
+    }
+    @media screen and (max-width: 767px) {
+        width: 100vw;
+        h1 {
+            font-size: ${theme.fonts.P4};
+            line-height: ${theme.fonts.P1};
+        }
+        hr {
+            width: 90%;
+        }
+        h2 {
+            font-size: ${theme.fonts.P3};
+            line-height: 23px;
+        }
+        .inputWrapper {
+            width: 90%;
+            input {
+                width: 75%;
+            }
+        }
+        button {
+            width: 90%;
         }
     }
 `
