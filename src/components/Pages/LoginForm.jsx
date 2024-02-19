@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import theme from '../../theme/index.js'
 import { FaChevronRight } from 'react-icons/fa'
-import Input from './Input.jsx'
+import TextInput from '../reusableUi/TextInput.jsx'
 import { BsPersonCircle } from 'react-icons/bs'
 
 const LoginFormStyled = styled.form`
@@ -95,7 +95,7 @@ function LoginForm() {
             <h1>Bienvenue chez nous !</h1>
             <hr />
             <h2>Connectez-vous</h2>
-            <Input
+            <TextInput
                 value={username}
                 onChange={handleChange}
                 placeholder={'Entrer votre prénom'}

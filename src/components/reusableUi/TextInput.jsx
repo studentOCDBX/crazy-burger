@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import theme from '../../theme/index.js'
 
-const InputStyled = styled.div`
+const TextInputStyled = styled.div`
     width: 400px;
     height: 55px;
     display: flex;
@@ -30,12 +30,12 @@ const InputStyled = styled.div`
     }
 `
 
-function Input({ value, onChange, Icon, ...otherProps }) {
+function TextInput({ value, onChange, Icon, ...otherProps }) {
     return (
-        <InputStyled>
+        <TextInputStyled>
             {Icon && Icon}
             <input onChange={onChange} type="text" {...otherProps} />
-        </InputStyled>
+        </TextInputStyled>
     )
 }
-export default Input
+export default TextInput
