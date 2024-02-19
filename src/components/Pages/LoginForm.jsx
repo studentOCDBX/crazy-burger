@@ -43,10 +43,11 @@ const LoginFormStyled = styled.form`
         input {
             width: 324px;
             height: 19px;
+            border: none;
         }
     }
     .inputSvg {
-        color: ${theme.colors.dark};
+        color: ${theme.colors.greyDark};
         width: ${theme.fonts.P0};
         height: ${theme.fonts.P0};
     }
