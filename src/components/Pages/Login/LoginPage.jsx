@@ -1,4 +1,4 @@
-import Logo from '../../Logo.jsx'
+import Logo from '../../reusableUi/Logo.jsx'
 import LoginForm from '../LoginForm.jsx'
 import styled from 'styled-components'
 import burgerImg from '../../../assets/burger-background.jpg'

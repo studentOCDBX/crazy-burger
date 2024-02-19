@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import theme from '../../theme/index.js'
-import { BsPersonCircle } from 'react-icons/bs'
 import { FaChevronRight } from 'react-icons/fa'
+import Input from './Input.jsx'
+import { BsPersonCircle } from 'react-icons/bs'
 
 const LoginFormStyled = styled.form`
     width: 464px;
@@ -29,28 +30,7 @@ const LoginFormStyled = styled.form`
         border: 1px solid ${theme.colors.primary};
         width: 400px;
     }
-    .inputWrapper {
-        width: 400px;
-        height: 55px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        background-color: ${theme.colors.white};
-        border-radius: 5px;
-        margin-bottom: 18px;
-        input {
-            width: 324px;
-            height: 19px;
-            border: none;
-        }
-    }
-    .inputSvg {
-        color: ${theme.colors.greyDark};
-        width: ${theme.fonts.P0};
-        height: ${theme.fonts.P0};
-    }
+
     button {
         border: 1px;
         border-radius: 5px;
@@ -86,12 +66,6 @@ const LoginFormStyled = styled.form`
             font-size: ${theme.fonts.P3};
             line-height: 23px;
         }
-        .inputWrapper {
-            width: 90%;
-            input {
-                width: 75%;
-            }
-        }
         button {
             width: 90%;
         }
@@ -121,16 +95,14 @@ function LoginForm() {
             <h1>Bienvenue chez nous !</h1>
             <hr />
             <h2>Connectez-vous</h2>
-            <div className="inputWrapper">
-                <BsPersonCircle className="inputSvg" />
-                <input
-                    type="text"
-                    required
-                    placeholder="Entrez votre prénom"
-                    value={username}
-                    onChange={handleChange}
-                />
-            </div>
+            <Input
+                value={username}
+                onChange={handleChange}
+                placeholder={'Entrer votre prénom'}
+                required
+                Icon={<BsPersonCircle className="inputSvg" />}
+            />
+
             <button>
                 Accéder à mon espace
                 <FaChevronRight />

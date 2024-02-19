@@ -1,6 +1,6 @@
-import logoImg from '../assets/logo-orange.png'
+import logoImg from '../../assets/logo-orange.png'
 import styled from 'styled-components'
-import theme from '../theme/index.js'
+import theme from '../../theme/index.js'
 
 const LogoStyled = styled.div`
     display: flex;
