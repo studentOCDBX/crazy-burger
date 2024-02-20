@@ -17,11 +17,7 @@ const TextInputStyled = styled.div`
         height: 19px;
         border: none;
     }
-    .inputSvg {
-        color: ${theme.colors.greyDark};
-        width: ${theme.fonts.P0};
-        height: ${theme.fonts.P0};
-    }
+
     @media screen and (max-width: 767px) {
         width: 90%;
         input {

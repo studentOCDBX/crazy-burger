@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import theme from '../../theme/index.js'
-import { FaChevronRight } from 'react-icons/fa'
 import TextInput from '../reusableUi/TextInput.jsx'
 import { BsPersonCircle } from 'react-icons/bs'
+import PrimaryBtn from '../reusableUi/PrimaryBtn.jsx'
+import { FaChevronRight } from 'react-icons/fa'
 
 const LoginFormStyled = styled.form`
     width: 464px;
@@ -30,29 +31,12 @@ const LoginFormStyled = styled.form`
         border: 1px solid ${theme.colors.primary};
         width: 400px;
     }
-
-    button {
-        border: 1px;
-        border-radius: 5px;
-        width: 400px;
-        height: 55px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 0.3rem;
-        font-family: Arial;
-        font-weight: ${theme.weights.bold};
-        font-size: ${theme.fonts.P0};
-        line-height: ${theme.fonts.P0};
-        background-color: ${theme.colors.primary};
-        color: ${theme.colors.white};
-        cursor: pointer;
-        &:hover {
-            background-color: ${theme.colors.background_white};
-            color: ${theme.colors.primary};
-        }
+    .inputSvg {
+        color: ${theme.colors.greyDark};
+        width: ${theme.fonts.P0};
+        height: ${theme.fonts.P0};
     }
+
     @media screen and (max-width: 767px) {
         width: 100vw;
         h1 {
@@ -65,9 +49,6 @@ const LoginFormStyled = styled.form`
         h2 {
             font-size: ${theme.fonts.P3};
             line-height: 23px;
-        }
-        button {
-            width: 90%;
         }
     }
 `
@@ -102,11 +83,10 @@ function LoginForm() {
                 required
                 Icon={<BsPersonCircle className="inputSvg" />}
             />
-
-            <button>
-                Accéder à mon espace
-                <FaChevronRight />
-            </button>
+            <PrimaryBtn
+                Icon={<FaChevronRight />}
+                content={'accedez à mon espace'}
+            />
         </LoginFormStyled>
     )
 }
