@@ -15,12 +15,12 @@ const LoginFormStyled = styled.form`
     justify-content: center;
     align-items: center;
     font-family: 'Amatic SC';
-    font-weight: ${theme.weights.bold};
+    font-weight: ${theme.fonts.weights.bold};
     color: ${theme.colors.white};
     h1 {
-        font-size: 48px;
-        line-height: 61px;
-        margin-bottom: 32px;
+        font-size: ${theme.fonts.size.P5};
+        line-height: ${theme.fonts.size.P6};
+        margin-bottom: ${theme.gridUnit * 4};
     }
     h2 {
         font-size: ${theme.fonts.P4};
@@ -32,22 +32,21 @@ const LoginFormStyled = styled.form`
         width: 400px;
     }
     .inputSvg {
-        color: ${theme.colors.greyDark};
-        width: ${theme.fonts.P0};
-        height: ${theme.fonts.P0};
+        width: ${theme.fonts.size.P0};
+        height: ${theme.fonts.size.P0};
     }
 
     @media screen and (max-width: 767px) {
         width: 100vw;
         h1 {
-            font-size: ${theme.fonts.P4};
-            line-height: ${theme.fonts.P1};
+            font-size: ${theme.fonts.size.P4};
+            line-height: ${theme.fonts.size.P1};
         }
         hr {
             width: 90%;
         }
         h2 {
-            font-size: ${theme.fonts.P3};
+            font-size: ${theme.fonts.size.P3};
             line-height: 23px;
         }
     }

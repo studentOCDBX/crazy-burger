@@ -3,7 +3,7 @@ import theme from '../../theme/index.js'
 
 const PrimaryBtnStyled = styled.button`
     border: 1px;
-    border-radius: 5px;
+    border-radius: ${theme.borderRadius.round};
     width: 400px;
     height: 55px;
     display: flex;
@@ -12,9 +12,9 @@ const PrimaryBtnStyled = styled.button`
     justify-content: center;
     gap: 0.3rem;
     font-family: Arial;
-    font-weight: ${theme.weights.bold};
-    font-size: ${theme.fonts.P0};
-    line-height: ${theme.fonts.P0};
+    font-weight: ${theme.fonts.weights.bold};
+    font-size: ${theme.fonts.size.P0};
+    line-height: ${theme.fonts.size.P0};
     background-color: ${theme.colors.primary};
     color: ${theme.colors.white};
     cursor: pointer;

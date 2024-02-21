@@ -14,8 +14,8 @@ const LogoStyled = styled.div`
         color: ${theme.colors.primary};
         height: 46px;
         font-family: 'Amatic SC';
-        font-size: 36px;
-        font-weight: ${theme.weights.bold};
+        font-size: ${theme.fonts.size.P4};
+        font-weight: ${theme.fonts.weights.bold};
         text-transform: uppercase;
         line-height: 46px;
         text-align: center;
@@ -29,9 +29,8 @@ const LogoStyled = styled.div`
     img {
         width: 80px;
         height: 60px;
-        /* margin-top: 197px; */
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         transform: scale(1.32);
     }
 `

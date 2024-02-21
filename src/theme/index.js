@@ -29,16 +29,26 @@ const spacing = {
 }
 
 const fonts = {
-    XXXS: '8px',
-    XXS: '10px',
-    XS: '12px',
-    P0: '15px',
-    P1: '18px',
-    P2: '20px',
-    P3: '24px',
-    P4: '36px',
-    P5: '48px',
-    P6: '60px',
+    size: {
+        XXXS: '8px',
+        XXS: '10px',
+        XS: '12px',
+        P0: '15px',
+        P1: '18px',
+        P2: '20px',
+        P3: '24px',
+        P4: '36px',
+        P5: '48px',
+        P6: '60px',
+    },
+    weights: {
+        light: 300,
+        regular: 400,
+        medium: 500,
+        semiBold: 600,
+        bold: 700,
+        heavy: 800,
+    },
 }
 const gridUnit = 8
 const borderRadius = {
@@ -52,14 +62,6 @@ const shadows = {
     medium: '0px -2px 8px -2px rgb(0 0 0 / 20%)',
     soft: '0 -2px 8px -2px rgb(0 0 0 / 10%) ',
 }
-const weights = {
-    light: 300,
-    regular: 400,
-    medium: 500,
-    semiBold: 600,
-    bold: 700,
-    heavy: 800,
-}
 
 export const theme = {
     colors,
@@ -67,7 +69,6 @@ export const theme = {
     gridUnit,
     borderRadius,
     shadows,
-    weights,
     spacing,
 }
 

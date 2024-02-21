@@ -10,12 +10,18 @@ const TextInputStyled = styled.div`
     align-items: center;
     gap: 1rem;
     background-color: ${theme.colors.white};
-    border-radius: 5px;
+    color: ${theme.colors.greySemiDark};
+    border-radius: ${theme.borderRadius.round};
     margin-bottom: 18px;
     input {
         width: 324px;
         height: 19px;
         border: none;
+        &::placeholder {
+            color: ${theme.colors.greyLight};
+            font-size: ${theme.fonts.size.P0};
+            line-height: 17px;
+        }
     }
 
     @media screen and (max-width: 767px) {
