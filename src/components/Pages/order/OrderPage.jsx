@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import theme from '../../../theme/index.js'
-import NavBar from '../../reusableUi/NavBar.jsx'
+import NavBar from './Navbar.jsx'
 
 function OrderPage() {
     // state (état, données)

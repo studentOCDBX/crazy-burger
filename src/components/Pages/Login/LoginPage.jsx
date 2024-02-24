@@ -18,6 +18,9 @@ const LoginPageStyled = styled.div`
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
+    .loginPage__Logo {
+        transform: scale(3);
+    }
 `
 
 function LoginPage() {
@@ -26,7 +29,7 @@ function LoginPage() {
     //  Affichage(render)
     return (
         <LoginPageStyled>
-            <Logo />
+            <Logo className={'loginPage__Logo'} />
             <LoginForm />
         </LoginPageStyled>
     )

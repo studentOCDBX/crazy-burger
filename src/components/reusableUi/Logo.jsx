@@ -7,7 +7,6 @@ const LogoStyled = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transform: scale(3);
 
     p {
         justify-content: center;
@@ -35,9 +34,9 @@ const LogoStyled = styled.div`
     }
 `
 
-function Logo() {
+function Logo({ className }) {
     return (
-        <LogoStyled>
+        <LogoStyled className={className}>
             <p>crazee</p>
             <img src={logoImg} alt="Burger logo image" />
             <p>burger</p>

@@ -52,7 +52,6 @@ const NavBarStyled = styled.div`
         display: flex;
         align-items: center;
         gap: 1rem;
-        margin-right: 70px;
         .navbar__wrapper__body {
             display: flex;
             flex: 1;
