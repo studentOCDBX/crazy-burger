@@ -58,7 +58,7 @@ const borderRadius = {
     circle: '50%',
 }
 const shadows = {
-    strong: '0px8px20px8px rgba(0,0,0,0.2) inset',
+    strong: '0px 8px 20px 8px rgba(0,0,0,0.2) inset',
     medium: '0px -2px 8px -2px rgb(0 0 0 / 20%)',
     soft: '0 -2px 8px -2px rgb(0 0 0 / 10%) ',
 }

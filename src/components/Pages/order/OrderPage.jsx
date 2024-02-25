@@ -28,7 +28,6 @@ const OrderPageStyled = styled.div`
     align-items: center;
     position: relative;
     .container {
-        border: 1px solid red;
         position: absolute;
         z-index: 1;
         display: flex;
@@ -40,7 +39,7 @@ const OrderPageStyled = styled.div`
         .main {
             width: 100%;
             flex: 1;
-            background-color: #fff;
+            background-color: ${theme.colors.background_white};
             border-radius: 0px 0px 15px 15px;
             box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
         }

@@ -1,12 +1,16 @@
 import logoImg from '../../assets/logo-orange.png'
 import styled from 'styled-components'
 import theme from '../../theme/index.js'
+import { Link } from 'react-router-dom'
 
 const LogoStyled = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    & :hover {
+        cursor: pointer;
+    }
 
     p {
         justify-content: center;
@@ -28,9 +32,6 @@ const LogoStyled = styled.div`
     img {
         width: 80px;
         height: 60px;
-    }
-    @media screen and (max-width: 767px) {
-        transform: scale(1.32);
     }
 `
 
