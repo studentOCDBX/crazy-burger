@@ -13,18 +13,23 @@ function NavBar() {
     //  Affichage(render)
     return (
         <NavBarStyled>
-            <Logo className="burger__logo" />
-            <div className="navbar__wrapper">
-                <div className="navbar__wrapper__body">
-                    <p>
-                        Hey,
-                        <span>{username}</span>
-                    </p>
-                    <Link className="btn__link" to="/">
-                        Se déconnecter
-                    </Link>
+            <Link to="#">
+                <Logo />
+            </Link>
+            <div className="navbar__rightPart">
+                {/* <div className="admin__button">Admin Button</div> */}
+                <div className="user__profile">
+                    <div className="user__profile__body">
+                        <p>
+                            Hey,
+                            <span>{username}</span>
+                        </p>
+                        <Link className="btn__link" to="/">
+                            Se déconnecter
+                        </Link>
+                    </div>
+                    <BsPersonCircle className="user__picture" />
                 </div>
-                <BsPersonCircle className="navbar__icon" />
             </div>
         </NavBarStyled>
     )
@@ -39,26 +44,26 @@ const NavBarStyled = styled.div`
     background-color: #fff;
     height: 11%;
     border-radius: 15px 15px 0 0;
-    &.burger__logo {
+    padding: 0 70px 0 20px;
+    @media screen and (max-width: 767px) {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        width: 240px;
-        transform: none;
+        justify-content: space-evenly;
+        padding: 32px 0;
+        height: auto;
     }
-    .navbar__wrapper {
+    .user__profile {
         height: 44px;
         display: flex;
         align-items: center;
         gap: 1rem;
-        .navbar__wrapper__body {
+        .user__profile__body {
             display: flex;
             flex: 1;
             gap: 0.2rem;
             flex-direction: column;
             align-items: center;
-            font-family: Open Sans;
             font-weight: 400;
             & p {
                 display: flex;
@@ -76,14 +81,26 @@ const NavBarStyled = styled.div`
             & .btn__link {
                 width: 100%;
                 line-height: 14px;
-                letter-spacing: 0em;
                 text-align: right;
+                &:hover {
+                    padding-bottom: 8px;
+                    border-bottom: 2px solid ${theme.colors.greyMedium};
+                }
             }
         }
-        .navbar__icon {
+        .user__picture {
             width: 36px;
             height: 36px;
             color: ${theme.colors.greyDark};
+        }
+    }
+    .navbar__rightPart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .admin__button {
+            background: pink;
+            border: 2px solid purple;
         }
     }
 `

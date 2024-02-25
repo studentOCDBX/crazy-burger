@@ -2,6 +2,7 @@ import Logo from '../../reusableUi/Logo.jsx'
 import LoginForm from '../LoginForm.jsx'
 import styled from 'styled-components'
 import burgerImg from '../../../assets/burger-background.jpg'
+import { Link } from 'react-router-dom'
 
 const LoginPageStyled = styled.div`
     height: 100vh;
@@ -20,6 +21,9 @@ const LoginPageStyled = styled.div`
     background-blend-mode: darken;
     .loginPage__Logo {
         transform: scale(3);
+        @media screen and (max-width: 767px) {
+            transform: scale(1.32);
+        }
     }
 `
 
@@ -29,7 +33,9 @@ function LoginPage() {
     //  Affichage(render)
     return (
         <LoginPageStyled>
-            <Logo className={'loginPage__Logo'} />
+            <Link to="/">
+                <Logo className={'loginPage__Logo'} />
+            </Link>
             <LoginForm />
         </LoginPageStyled>
     )
