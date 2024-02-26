@@ -1,7 +1,6 @@
 import logoImg from '../../assets/logo-orange.png'
 import styled from 'styled-components'
 import theme from '../../theme/index.js'
-import { Link } from 'react-router-dom'
 
 const LogoStyled = styled.div`
     display: flex;
