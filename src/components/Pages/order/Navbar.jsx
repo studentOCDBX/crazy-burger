@@ -1,21 +1,17 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Logo from '../../reusableUi/Logo.jsx'
 import NavbarRightPart from './NavbarRightPart.jsx'
-import { useParams } from 'react-router-dom'
+import reloadPage from '../../../utils/window.jsx'
 
-function NavBar() {
+function NavBar({ username }) {
     // state (état, données)
-    const { username } = useParams()
 
     // Comportements
 
     //  Affichage(render)
     return (
         <NavBarStyled>
-            <Link to="#">
-                <Logo />
-            </Link>
+            <Logo className="orderPage__Logo" onClick={reloadPage} />
             <NavbarRightPart username={username} />
         </NavBarStyled>
     )
@@ -31,6 +27,9 @@ const NavBarStyled = styled.div`
     height: 11%;
     border-radius: 15px 15px 0 0;
     padding: 0 70px 0 20px;
+    .orderPage__Logo {
+        cursor: pointer;
+    }
     @media screen and (max-width: 767px) {
         display: flex;
         flex-direction: column;

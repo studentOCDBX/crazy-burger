@@ -7,9 +7,6 @@ const LogoStyled = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    & :hover {
-        cursor: pointer;
-    }
 
     p {
         justify-content: center;
@@ -34,9 +31,12 @@ const LogoStyled = styled.div`
     }
 `
 
-function Logo({ className }) {
+function Logo({ className, onClick }) {
     return (
-        <LogoStyled className={className}>
+        <LogoStyled
+            className={className}
+            onClick={onClick}
+        >
             <p>crazee</p>
             <img src={logoImg} alt="Burger logo image" />
             <p>burger</p>
