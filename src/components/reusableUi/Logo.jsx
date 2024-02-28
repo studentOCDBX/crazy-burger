@@ -7,7 +7,6 @@ const LogoStyled = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transform: scale(3);
 
     p {
         justify-content: center;
@@ -30,14 +29,14 @@ const LogoStyled = styled.div`
         width: 80px;
         height: 60px;
     }
-    @media screen and (max-width: 767px) {
-        transform: scale(1.32);
-    }
 `
 
-function Logo() {
+function Logo({ className, onClick }) {
     return (
-        <LogoStyled>
+        <LogoStyled
+            className={className}
+            onClick={onClick}
+        >
             <p>crazee</p>
             <img src={logoImg} alt="Burger logo image" />
             <p>burger</p>

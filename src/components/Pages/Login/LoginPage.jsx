@@ -5,10 +5,6 @@ import burgerImg from '../../../assets/burger-background.jpg'
 
 const LoginPageStyled = styled.div`
     height: 100vh;
-    /* background-image: url(${burgerImg});
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: darken; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,6 +14,12 @@ const LoginPageStyled = styled.div`
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
+    .loginPage__Logo {
+        transform: scale(3);
+        @media screen and (max-width: 767px) {
+            transform: scale(1.32);
+        }
+    }
 `
 
 function LoginPage() {
@@ -26,7 +28,7 @@ function LoginPage() {
     //  Affichage(render)
     return (
         <LoginPageStyled>
-            <Logo />
+            <Logo className={'loginPage__Logo'} />
             <LoginForm />
         </LoginPageStyled>
     )
