@@ -1,5 +1,5 @@
-import { useParams } from 'react-router-dom'
 import Profile from './Profile.jsx'
+import styled from 'styled-components'
 
 function NavbarRightPart({ username }) {
     // state (état, données)
@@ -15,7 +15,7 @@ function NavbarRightPart({ username }) {
     )
 }
 export default NavbarRightPart
-import styled from 'styled-components'
+
 
 const NavbarRightPartStyled = styled.div`
     display: flex;

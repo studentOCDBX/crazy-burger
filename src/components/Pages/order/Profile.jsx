@@ -32,7 +32,7 @@ const ProfileStyled = styled.div`
         gap: 0.2rem;
         flex-direction: column;
         align-items: center;
-        font-weight: 400;
+        font-weight: ${theme.fonts.weights.regular};
         & p {
             display: flex;
             justify-content: center;
@@ -41,7 +41,7 @@ const ProfileStyled = styled.div`
             gap: 0.5rem;
             margin: 0;
             & span {
-                font-weight: 700;
+                font-weight: ${theme.fonts.weights.bold};
                 line-height: 22px;
                 color: ${theme.colors.primary};
             }
@@ -50,6 +50,7 @@ const ProfileStyled = styled.div`
             width: 100%;
             line-height: 14px;
             text-align: right;
+            text-decoration: none;
             &:hover {
                 padding-bottom: 8px;
                 border-bottom: 2px solid ${theme.colors.greyMedium};
