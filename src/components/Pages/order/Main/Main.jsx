@@ -1,12 +1,10 @@
 import styled from 'styled-components'
 import theme from '../../../../theme/index.js'
-import { useState } from 'react'
-import fakeMenu2 from '../../../../fakeData/fakeMenu.js'
 import Menu from './Menu.jsx'
 
 function Main() {
     // state (état, données)
-    const [menus, setMenus] = useState(fakeMenu2)
+
     // Comportements
 
     //  Affichage(render)
@@ -29,6 +27,7 @@ const MainStyled = styled.div`
     //This code will be used for  ordebasket
     /* grid-template-columns: 25% 1fr; */
     grid-template-columns: 1fr;
+    overflow: scroll;
     /* .orderbasket {
         background: #ee08ad;
     } */
