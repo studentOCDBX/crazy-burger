@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import theme from '../../../theme/index.js'
 import NavBar from './Navbar/Navbar.jsx'
 import { useParams } from 'react-router-dom'
-import Main from './Main.jsx'
+import Main from './Main/Main.jsx'
 
 function OrderPage() {
     // state (état, données)

@@ -1,7 +1,8 @@
 import styled from 'styled-components'
-import theme from '../../../theme/index.js'
+import theme from '../../../../theme/index.js'
 import { useState } from 'react'
-import fakeMenu2 from '../../../fakeData/fakeMenu.js'
+import fakeMenu2 from '../../../../fakeData/fakeMenu.js'
+import Menu from './Menu.jsx'
 
 function Main() {
     // state (état, données)
@@ -12,7 +13,7 @@ function Main() {
     return (
         <MainStyled>
             <div className="orderbasket">basket</div>
-            <div className="menuBoard">Menu</div>
+            <Menu />
         </MainStyled>
     )
 }
@@ -28,8 +29,5 @@ const MainStyled = styled.div`
     grid-template-columns: 25% 1fr;
     .orderbasket {
         background: #ee08ad;
-    }
-    .menuBoard {
-        background: #275308;
     }
 `
