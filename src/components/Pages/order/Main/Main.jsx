@@ -12,7 +12,7 @@ function Main() {
     //  Affichage(render)
     return (
         <MainStyled>
-            <div className="orderbasket">basket</div>
+            {/* <div className="orderbasket">basket</div> */}
             <Menu />
         </MainStyled>
     )
@@ -26,8 +26,10 @@ const MainStyled = styled.div`
     border-radius: 0px 0px 15px 15px;
     box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
     display: grid;
-    grid-template-columns: 25% 1fr;
-    .orderbasket {
+    //This code will be used for  ordebasket
+    /* grid-template-columns: 25% 1fr; */
+    grid-template-columns: 1fr;
+    /* .orderbasket {
         background: #ee08ad;
-    }
+    } */
 `
