@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import theme from '../../../theme/index.js'
-import NavBar from './Navbar.jsx'
+import NavBar from './Navbar/Navbar.jsx'
 import { useParams } from 'react-router-dom'
 import Main from './Main.jsx'
 

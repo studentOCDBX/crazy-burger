@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import Logo from '../../reusableUi/Logo.jsx'
+import Logo from '../../../reusableUi/Logo.jsx'
 import NavbarRightPart from './NavbarRightPart.jsx'
-import reloadPage from '../../../utils/window.jsx'
-import theme from '../../../theme/index.js'
+import reloadPage from '../../../../utils/window.jsx'
+import theme from '../../../../theme/index.js'
 
 function NavBar({ username }) {
     // state (état, données)

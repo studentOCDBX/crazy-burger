@@ -30,6 +30,6 @@ const MainStyled = styled.div`
         background: #ee08ad;
     }
     .menuBoard {
-        background: cyan;
+        background: #275308;
     }
 `

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../../theme/index.js'
+import theme from '../../../../theme/index.js'
 import { BsPersonCircle } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 
