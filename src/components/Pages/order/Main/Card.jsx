@@ -1,9 +1,9 @@
 import PrimaryBtn from '../../../reusableUi/PrimaryBtn.jsx'
 import styled from 'styled-components'
 
-function Product({ imageSource, title, price }) {
+function Card({ imageSource, title, price }) {
     return (
-        <ProductStyled>
+        <CardStyled>
             <div className="cardImgContainer">
                 <img src={imageSource} alt={`${title} image`} />
             </div>
@@ -17,12 +17,12 @@ function Product({ imageSource, title, price }) {
                     />
                 </div>
             </div>
-        </ProductStyled>
+        </CardStyled>
     )
 }
-export default Product
+export default Card
 
-const ProductStyled = styled.div`
+const CardStyled = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;

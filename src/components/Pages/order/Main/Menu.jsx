@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import fakeMenu2 from '../../../../fakeData/fakeMenu.js'
-import Product from './Product.jsx'
+import Card from './Card.jsx'
 function Menu() {
     // state (état, données)
     const [menus, setMenus] = useState(fakeMenu2)
@@ -17,7 +17,7 @@ function Menu() {
                 //     title={menu.title}
                 //     key={menu.id}
                 // />
-                <Product {...menu} />
+                <Card {...menu} key={menu.id} />
             ))}
         </MenuStyled>
     )
