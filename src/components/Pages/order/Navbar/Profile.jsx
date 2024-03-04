@@ -50,7 +50,6 @@ const ProfileStyled = styled.div`
             width: 100%;
             line-height: 14px;
             text-align: right;
-            text-decoration: none;
             &:hover {
                 padding-bottom: 8px;
                 border-bottom: 2px solid ${theme.colors.greyMedium};
@@ -58,8 +57,8 @@ const ProfileStyled = styled.div`
         }
     }
     .user__picture {
-        width: 36px;
-        height: 36px;
+        width: ${theme.fonts.size.p4};
+        height: ${theme.fonts.size.p4};
         color: ${theme.colors.greyDark};
     }
 `

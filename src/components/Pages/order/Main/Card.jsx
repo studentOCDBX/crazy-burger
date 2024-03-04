@@ -1,36 +1,18 @@
+import theme from '../../../../theme/index.js'
 import PrimaryBtn from '../../../reusableUi/PrimaryBtn.jsx'
 import styled from 'styled-components'
-
-function Card({ imageSource, title, price }) {
-    return (
-        <CardStyled>
-            <div className="cardImgContainer">
-                <img src={imageSource} alt={`${title} image`} />
-            </div>
-            <div className="cardBody">
-                <h1>{title}</h1>
-                <div className="cardBodydescription">
-                    <span> {price} </span>{' '}
-                    <PrimaryBtn
-                        className="cardMenuPrimaryBtn"
-                        content="Ajouter"
-                    />
-                </div>
-            </div>
-        </CardStyled>
-    )
-}
-export default Card
+import { formatPrice } from '../../../../utils/math.js'
 
 const CardStyled = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #f06204;
+    background: ${theme.colors.white};
     width: 240px;
     height: 330px;
-
+    border-radius: ${theme.borderRadius.extraRound};
+    box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
     & .cardImgContainer {
         width: 90%;
         height: 50%;
@@ -48,15 +30,18 @@ const CardStyled = styled.div`
         display: flex;
         flex-direction: column;
         margin: 15px 20px 10px 20px;
-
-        h1 {
+        & h1 {
+            width: 185.57px;
+            height: 46px;
             margin: 0;
             font-family: 'Amatic SC';
-            font-size: 36px;
-            font-weight: 700;
+            font-size: ${theme.fonts.size.P4};
+            font-weight: ${theme.fonts.weights.bold};
             line-height: 45px;
-            letter-spacing: 0em;
             text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .cardBodydescription {
             height: 70%;
@@ -66,7 +51,39 @@ const CardStyled = styled.div`
             & .cardMenuPrimaryBtn {
                 width: 95px;
                 height: 38px;
+                transition: all 0.5s ease;
+                &:hover {
+                    border: 1px solid ${theme.colors.primary};
+                    background: ${theme.colors.white};
+                }
+                &:active {
+                    background-color: ${theme.colors.primary};
+                    color: ${theme.colors.white};
+                }
+            }
+            & span {
+                color: ${theme.colors.primary};
             }
         }
     }
 `
+function Card({ imageSource, title, price }) {
+    return (
+        <CardStyled>
+            <div className="cardImgContainer">
+                <img src={imageSource} alt={`${title} image`} />
+            </div>
+            <div className="cardBody">
+                <h1>{title}</h1>
+                <div className="cardBodydescription">
+                    <span> {formatPrice(price)} </span>{' '}
+                    <PrimaryBtn
+                        className="cardMenuPrimaryBtn"
+                        content="Ajouter"
+                    />
+                </div>
+            </div>
+        </CardStyled>
+    )
+}
+export default Card
