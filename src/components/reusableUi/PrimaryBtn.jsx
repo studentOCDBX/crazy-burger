@@ -27,9 +27,9 @@ const PrimaryBtnStyled = styled.button`
     }
 `
 
-function PrimaryBtn({ content, Icon }) {
+function PrimaryBtn({ content, Icon, className }) {
     return (
-        <PrimaryBtnStyled>
+        <PrimaryBtnStyled className={className}>
             {content}
             {Icon && Icon}
         </PrimaryBtnStyled>
