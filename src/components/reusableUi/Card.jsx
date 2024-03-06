@@ -1,7 +1,6 @@
-import theme from '../../../../theme/index.js'
-import PrimaryBtn from '../../../reusableUi/PrimaryBtn.jsx'
+import theme from '../../theme/index.js'
+import PrimaryBtn from './PrimaryBtn.jsx'
 import styled from 'styled-components'
-import { formatPrice } from '../../../../utils/math.js'
 
 const CardStyled = styled.div`
     display: flex;
@@ -24,6 +23,7 @@ const CardStyled = styled.div`
             object-position: center;
         }
     }
+    
     & .cardBody {
         width: 90%;
         height: 30%;
@@ -43,6 +43,7 @@ const CardStyled = styled.div`
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
         .cardBodydescription {
             height: 70%;
             display: flex;
@@ -67,7 +68,7 @@ const CardStyled = styled.div`
         }
     }
 `
-function Card({ imageSource, title, price }) {
+function Card({ imageSource, title, productPrice }) {
     return (
         <CardStyled>
             <div className="cardImgContainer">
@@ -76,7 +77,7 @@ function Card({ imageSource, title, price }) {
             <div className="cardBody">
                 <h1>{title}</h1>
                 <div className="cardBodydescription">
-                    <span> {formatPrice(price)} </span>{' '}
+                    <span> {productPrice} </span>{' '}
                     <PrimaryBtn
                         className="cardMenuPrimaryBtn"
                         content="Ajouter"

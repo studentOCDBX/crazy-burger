@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import fakeMenu2 from '../../../../fakeData/fakeMenu.js'
-import Card from './Card.jsx'
+import Card from '../../../reusableUi/Card.jsx'
+import { formatPrice } from '../../../../utils/math.js'
+
 function Menu() {
     // state (état, données)
     const [menus, setMenus] = useState(fakeMenu2)
@@ -10,14 +12,13 @@ function Menu() {
 
     return (
         <MenuStyled>
-            {menus.map((menu) => (
-                // <Product
-                //     imageSource={menu.imageSource}
-                //     price={menu.price}
-                //     title={menu.title}
-                //     key={menu.id}
-                // />
-                <Card {...menu} key={menu.id} />
+            {menus.map(({ id, imageSource, price, title }) => (
+                <Card
+                    key={id}
+                    imageSource={imageSource}
+                    title={title}
+                    productPrice={formatPrice(price)}
+                />
             ))}
         </MenuStyled>
     )
